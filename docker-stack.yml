@@ -70,6 +70,14 @@ services:
       restart_policy:
         condition: on-failure    
 
+  art_scraper:
+    image: artscraper:v.0.3
+    volumes:
+      - /home/emilime/repos/art_docker/artscraper/data:/artscraper/data
+      - /home/emilime/repos/art_docker/artscraper/.scrapy:/artscraper/.scrapy
+    networks:
+      - monitor-net
+
   cadvisor:
     image: google/cadvisor
     volumes:
