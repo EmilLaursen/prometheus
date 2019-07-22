@@ -73,8 +73,8 @@ services:
   art_scraper:
     image: artscraper:v.0.3
     volumes:
-      - /home/emilime/repos/art_docker/artscraper/data:/artscraper/data
-      - /home/emilime/repos/art_docker/artscraper/.scrapy:/artscraper/.scrapy
+      - "../art_docker/artscraper/data:/artscraper/data"
+      - "../art_docker/artscraper/.scrapy:/artscraper/.scrapy"
     networks:
       - monitor-net
 
