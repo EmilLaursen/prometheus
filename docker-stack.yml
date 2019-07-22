@@ -79,7 +79,7 @@ services:
       - monitor-net
 
   cadvisor:
-    image: google/cadvisor
+    image: emillime/raspbian_caadvisor:v.0.0
     volumes:
       - /:/rootfs:ro
       - /var/run:/var/run:rw
